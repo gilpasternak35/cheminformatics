@@ -1,5 +1,5 @@
-from cuchemportal.scheduler.celery_trim import trim_string
-from cuchemportal.scheduler.celery_concatenate import concatenate_strings
+from cuchemportal.scheduler.workerB import trim_string
+from cuchemportal.scheduler.workerA import concatenate_strings
 from flask import (
    Flask,
    request,
