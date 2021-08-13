@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: kube-pod-parallel
+spec:
+  containers:
+  - name: cowsay
+    image: docker/whalesay
+    imagePullPolicy: Always
+    command: ["cowsay", "hello world"]
+  - name: cowsay-other
+    image: docker/whalesay
+    imagePullPolicy: Always
+    command: ["cowsay", "goodbye world"]

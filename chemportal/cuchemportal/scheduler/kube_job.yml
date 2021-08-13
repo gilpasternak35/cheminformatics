@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job 
+metadata:
+  name: my-first-job
+spec:
+  template: 
+    metadata:
+      name: my-template
+    spec:
+      containers:
+      - name: my-py
+        image: python 
+        command: ["python", "SUCCESS"]
+      - name: whale
+        image: docker/whalesay
+        command: ["cowsay", "hello world"]
+      restartPolicy: Never
